@@ -4,7 +4,8 @@
 
 ## 在线访问
 
-- **Vercel**: [anthropic-ai-news.vercel.app](https://anthropic-ai-news.vercel.app)
+- **ymacy.top/news** — [http://ymacy.top/news](http://ymacy.top/news)
+- **Vercel** — [https://anthropic-ai-news.vercel.app](https://anthropic-ai-news.vercel.app)
 
 ## 架构
 
@@ -30,7 +31,7 @@ public/index.html + app.js + styles.css
 | 爬虫 | cheerio + node-fetch + xml2js |
 | 翻译 | translatte（Google Translate 免费接口） |
 | 样式 | 报纸风：serif 字体、米色纸张底色、双栏排版 |
-| 部署 | Vercel 静态站 |
+| 部署 | 阿里云 ECS（ymacy.top）+ Vercel |
 | 自动化 | GitHub Actions（每日 CST 09:00） |
 
 ## 项目结构
@@ -49,25 +50,19 @@ public/index.html + app.js + styles.css
 │       ├── blog.json     # 博客文章数据
 │       └── research.json # 研究文章数据
 ├── .github/workflows/
-│   └── daily.yml         # 每日定时抓取
+│   └── daily.yml         # 每日定时抓取 + 部署到阿里云
 ├── vercel.json
 └── package.json
 ```
 
-## 本地运行
-
-```bash
-npm install
-npm run scrape    # 抓取最新文章
-npm run serve     # 启动本地服务器 http://localhost:3000
-```
-
 ## 自动更新流程
 
-1. GitHub Actions 每日 CST 09:00 触发
-2. 运行 `npm run scrape`（增量：对比 sitemap lastmod，只处理新文章）
-3. Git commit + push 更新的 JSON
-4. Vercel 检测到 push → 自动重新部署
+```
+GitHub Actions（每日 CST 09:00）
+  → npm run scrape（增量抓取+翻译）
+  → git push（更新 GitHub JSON）
+  → scp 到阿里云 ECS（更新 ymacy.top/news）
+```
 
 ## 功能特点
 
