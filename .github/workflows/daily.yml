@@ -30,3 +30,14 @@ jobs:
           git add public/data/*.json
           git diff --staged --quiet || git commit -m "chore: update articles $(date +%Y-%m-%d) [skip ci]"
           git push
+
+      - name: Deploy to Alibaba Cloud
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 8.130.50.40
+          username: root
+          key: ${{ secrets.ECS_SSH_KEY }}
+          source: "public/data/*.json,public/app.js,public/styles.css,public/index.html"
+          strip_components: 1
+          target: "/var/www/anthropic-news"
+          overwrite: true
