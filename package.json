@@ -1,0 +1,19 @@
+{
+  "name": "anthropic-ai-news",
+  "version": "1.0.0",
+  "description": "Anthropic AI 新闻门户 — 中文报纸风",
+  "private": true,
+  "scripts": {
+    "scrape": "node scripts/scraper.js",
+    "serve": "npx serve public -p 3000"
+  },
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
+    "cheerio": "^1.0.0",
+    "google-translate-noapi": "github:bitcraftlab/google-translate-noapi",
+    "node-fetch": "^2.7.0",
+    "open-translate": "^1.4.3",
+    "translatte": "^3.0.1",
+    "xml2js": "^0.6.2"
+  }
+}

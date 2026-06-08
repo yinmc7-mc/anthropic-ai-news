@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthropic AI 新闻</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-top">
+      <span class="masthead-label">AI 深度简讯</span>
+      <span class="masthead-date" id="mastheadDate"></span>
+      <span class="masthead-label">Vol. 1</span>
+    </div>
+    <h1 class="masthead-title">ANTHROPIC NEWS</h1>
+    <p class="masthead-subtitle">Claude · AI 安全 · 前沿研究 — 每日中文精选</p>
+    <div class="masthead-rule"></div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="two-col" id="mainGrid">
+
+      <section class="col" id="blogCol">
+        <h2 class="col-header">
+          <span class="col-label">博客</span>
+          <span class="col-label-en">Blog</span>
+        </h2>
+        <div class="col-body" id="blogList"></div>
+      </section>
+
+      <section class="col" id="researchCol">
+        <h2 class="col-header">
+          <span class="col-label">研究</span>
+          <span class="col-label-en">Research</span>
+        </h2>
+        <div class="col-body" id="researchList"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>数据来源：<a href="https://www.anthropic.com" target="_blank" rel="noopener">anthropic.com</a> · 自动抓取 + 机器翻译 · 仅供参考</p>
+    <p class="footer-update" id="lastUpdate"></p>
+  </footer>
+
+</div>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <button class="sidebar-close" id="sidebarClose" aria-label="关闭">&times;</button>
+    <article class="article-full" id="articleFull"></article>
+  </div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
