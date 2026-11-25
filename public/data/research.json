@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24T10:54:58.024Z",
+  "lastUpdated": "2026-11-25T09:50:45.297Z",
   "articles": [
     {
       "id": "working-with-ai",
@@ -5056,8 +5056,8 @@
       "contentText": "人工智能代理如何影响专家的判断",
       "date": "2026-02-24",
       "image": "https://assets.claude.com/6d4a0d28992ade92d6fa63646fd9c9d318245c6c.jpg",
-      "scrapedAt": "2026-11-24T10:54:14.714Z",
-      "lastmod": "2026-11-24T06:58:09.229Z",
+      "scrapedAt": "2026-11-25T09:50:40.559Z",
+      "lastmod": "2026-11-24T17:02:51.779Z",
       "type": "research",
       "keyPoints": [],
       "originalTitle": "Alignment",
